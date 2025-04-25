@@ -1,0 +1,24 @@
+{{!@formatter:off}}
+{
+	"name": "{{slugName}}",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"deploy": "cross-env-shell NODE_TLS_REJECT_UNAUTHORIZED=0 fast-rc-apps deploy --config=./deploy-config.json",
+		"deploy:prod": "yarn deploy -- --production",
+		"package": "fast-rc-apps package",
+		"package:prod": "yarn package -- --production",
+		"watch": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 yarn deploy -- --watch"
+	},
+	"devDependencies": {
+        "@types/node": "14.18.3",
+        "fs-extra": "9.0.1",
+		"cross-env": "7.0.2",
+        "@rocket.chat/apps-engine": "^1.36.0",
+		"typescript": "4.5.2"
+	},
+    "dependencies": {
+        "@rocket.chat/icons": "^0.38.0",
+        "@rocket.chat/ui-kit": "^0.36.1"
+    }
+}

@@ -1,0 +1,113 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"eslint:recommended",
+		"prettier",
+		"plugin:jest/recommended"
+	],
+	"ignorePatterns": [
+		"node_modules",
+		"dist",
+		"target",
+		"lib",
+		"build",
+		"*.d.ts",
+		"*.hbs",
+		"*.bundle.ts"
+	],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2020
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"jest/globals": true
+	},
+	"globals": {
+		"NodeJS": true
+	},
+	"root": true,
+	"plugins": [
+		"prettier",
+		"jest"
+	],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+
+		"@typescript-eslint/no-namespace": "off",
+		"@typescript-eslint/no-use-before-define": "off",
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-empty-interface": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"ignoreRestSiblings": true
+			}
+		],
+		"no-unused-vars": [
+			"warn",
+			{
+				"ignoreRestSiblings": true
+			}
+		],
+		"no-prototype-builtins": "warn",
+		"no-inner-declarations": "off",
+		"no-async-promise-executor": "warn",
+		"require-yield": "warn",
+		"no-redeclare": "warn",
+		"no-useless-escape": "warn",
+		"@typescript-eslint/explicit-function-return-type": [
+			"warn",
+			{
+				"allowExpressions": true
+			}
+		],
+		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/naming-convention": [
+			"warn",
+			{
+				"selector": [
+					"enum",
+					"enumMember"
+				],
+				"format": [
+					"camelCase",
+					"UPPER_CASE",
+					"PascalCase"
+				]
+			},
+			{
+				"selector": "interface",
+				"format": [
+					"PascalCase"
+				],
+				"prefix": [
+					"I"
+				]
+			},
+			{
+				"selector": "class",
+				"format": [
+					"PascalCase"
+				]
+			}
+		],
+		"@typescript-eslint/ban-ts-comment": [
+			"warn",
+			{
+				"ts-ignore": "allow-with-description"
+			}
+		],
+		"@typescript-eslint/no-non-null-asserted-optional-chain": "warn"
+	}
+}
+
+
