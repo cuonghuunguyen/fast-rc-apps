@@ -4,6 +4,7 @@ const fs = require("fs-extra");
 const { deployApp, isExistingApp, login } = require("./api-helper");
 const zipHelper = require("./zip-helper");
 const { handler: package } = require("../commands/package");
+const { getOldestFile } = require("./file-helper");
 
 const deploy = async argv => {
 	const { username, password, url, zipPath, production, forceUpdate, code, skipTypeCheck, permissions } = argv;
@@ -17,7 +18,7 @@ const deploy = async argv => {
 	} else {
 		await package({ production, skipTypeCheck });
 		const distFolder = path.resolve("dist");
-		const zipName = fs.readdirSync(distFolder)[0];
+		const zipName = getOldestFile(distFolder);
 		if (!zipName) {
 			throw new Error("App packaging failed");
 		}

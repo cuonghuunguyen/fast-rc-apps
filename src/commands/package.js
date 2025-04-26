@@ -63,7 +63,7 @@ const handler = async ({ production, skipTypeCheck }) => {
 			target: ["node12"],
 			platform: "node",
 			external: ["@rocket.chat/apps-engine"],
-			plugins: [...(skipTypeCheck ? [] : [typescriptCheck]), cleanUpDist, packageApp]
+			plugins: [...(skipTypeCheck ? [] : [typescriptCheck]), packageApp]
 		});
 
 		if (result.errors.length) {

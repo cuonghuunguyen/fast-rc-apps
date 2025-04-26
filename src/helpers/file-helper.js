@@ -58,10 +58,24 @@ const getPackageJson = () => {
 	return packageJson;
 };
 
+const getOldestFile = (dirPath) => {
+	return fs.readdirSync(dirPath)
+		.map(file => {
+			const filePath = path.join(dirPath, file);
+			const stats = fs.statSync(filePath);
+			return { file, mtime: stats.mtime };
+		})
+		.reduce((oldest, current) => {
+			return current.mtime < oldest.mtime ? current : oldest;
+		}).file;
+
+}
+
 module.exports = {
 	getTSConfigJson,
 	getAppJson,
 	readJsonFile,
 	getPackageJson,
-	getRcAppsConfig
+	getRcAppsConfig,
+	getOldestFile
 };
