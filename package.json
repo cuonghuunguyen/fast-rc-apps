@@ -1,6 +1,6 @@
 {
 	"name": "fast-rc-apps",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A faster rocket chat apps CLI for development",
 	"author": "CuongHuuNguyen",
 	"license": "UNLICENSED",
@@ -10,6 +10,15 @@
 	"files": [
 		"src"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cuonghuunguyen/fast-rc-apps.git"
+	},
+	"homepage": "https://github.com/cuonghuunguyen/fast-rc-apps#readme",
+	"keywords": ["cli", "rocket-chat", "development", "tools"],
+	"bugs": {
+		"url": "https://github.com/cuonghuunguyen/fast-rc-apps/issues"
+	},
 	"scripts": {
 		"test": "run-p --aggregate-output --continue-on-error test:**",
 		"test:lint": "yarn lint",
@@ -44,6 +53,5 @@
 		"prettier": "2.8.4",
 		"typescript": "4.5.2"
 	},
-	"main": "src/index.js",
-	"keywords": []
+	"main": "src/index.js"
 }

@@ -1,8 +1,6 @@
 # fast-rc-apps
 The Rocket.Chat Apps CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Rocket.Chat Apps app directly from a command shell.
 
-> Starting from version 5.3.0, app CLI can be used to package/deploy the other Rocket.Chat Apps as well.
-
 ## Prerequisite
 This package requires node.js version > 12.18.4 to work normally 
 
