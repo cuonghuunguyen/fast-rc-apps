@@ -14,6 +14,9 @@
 		"type": "git",
 		"url": "https://github.com/cuonghuunguyen/fast-rc-apps.git"
 	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
 	"homepage": "https://github.com/cuonghuunguyen/fast-rc-apps#readme",
 	"keywords": ["cli", "rocket-chat", "development", "tools"],
 	"bugs": {
